@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for
 from models import db, Project, app
 import random
 import datetime
