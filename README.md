@@ -24,7 +24,7 @@ I hope you enjoy my Portfolio. I had so much fun creating this and seeing the fi
 
 
 
-What I've learn't:
+What I've learnt:
 1. This was a fun experience using my problem solving skills and creating games and websites. I truly enjoyed the process no matter how frustrating at times the end results and the final project brought me so much joy and made it all worth it, this is definately the firts of many. 
 2. I want to continue learning and improving the skills i've learnt from this Techdegree and I've definatley improved.
 3. I learnt how i can use python for web development and creating simple and even complex games.
