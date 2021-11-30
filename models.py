@@ -16,8 +16,8 @@ class Project(db.Model):
     url = db.Column('GitHub Repo Link', db.Text)
 
     def __repr__(self):
-        return f"""\n----------
-                \Project Title: {self.title}
+        return f"""\n-------
+                \Title: {self.title}
                 \r----------
                 \Date: {self.date}
                 \r----------
@@ -26,4 +26,4 @@ class Project(db.Model):
                 \Skills: {self.skills}
                 \r----------
                 \rGithub Repo Link: {self.url}
-                 f"""----------
+                 """
