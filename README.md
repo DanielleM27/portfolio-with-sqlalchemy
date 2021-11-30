@@ -1,10 +1,17 @@
-# portfolio-with-sqlalchemy
+# Portfolio-With-Sqlalchemy
 Treehouse Python Techdegree Unit 5 Project - Portfolio with SQLAlchemy
 
-Project Overview
-Create an interface for a portfolio web application. The main (index) page lists your projects including the project title and short description. Each project links to a detail page that displays the title, date, and description.
 
+
+Project Overview
+
+
+
+Create an interface for a portfolio web application. The main (index) page lists your projects including the project title and short description. Each project links to a detail page that displays the title, date, and description.
 The application lets the user add or edit project information. When adding or editing a project, the application prompts the user for title, date, skills, description, and a link to a repo. The results for these entries are stored in a database and displayed on the homepage. The HTML/CSS for this site has been supplied by Team Treehouse. 
+
+
+
 
 How to run locally:
 1. Download the project files from my github or clone the repository.
@@ -13,6 +20,8 @@ How to run locally:
 4. Run app.py from the terminal.
 5. Visit http://127.0.0.1:8000 in your browser and navigate the website. 
 I hope you enjoy my Portfolio. I had so much fun creating this and seeing the final result brought me so much joy!
+
+
 
 
 What I learned:
