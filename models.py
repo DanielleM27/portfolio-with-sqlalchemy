@@ -9,10 +9,10 @@ db = SQLAlchemy(app)
 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column("Title", db.String())
-    date = db.Column("Date", db.DateTime)
-    description = db.Column("Description", db.Text)
-    skills = db.Column("Skills", db.Text)
+    title = db.Column("Project Title", db.String())
+    date = db.Column("Project Date", db.DateTime)
+    description = db.Column("Project Description", db.Text)
+    skills = db.Column("Skills Used", db.Text)
     url = db.Column('GitHub Repo Link', db.Text)
 
     def __repr__(self):
@@ -25,5 +25,5 @@ class Project(db.Model):
                 \r----------
                 \Skills: {self.skills}
                 \r----------
-                \rGithub Repo: {self.url}
-                 """
+                \rGithub Repo Link: {self.url}
+                 f"""----------
