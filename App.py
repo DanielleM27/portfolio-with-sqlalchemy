@@ -50,7 +50,7 @@ def edit_project(id):
         year = request.form["date"][0:4]
         month = request.form["date"][5:7]
         project.date = request.form["date"]
-        project.description = request.form["description"]
+        project.description = request.form.get(["description", False]),
         project.skills = request.form["skills"]
         project.url = request.form["github"]
         db.session.commit()
