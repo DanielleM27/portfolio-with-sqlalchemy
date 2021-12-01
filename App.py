@@ -24,7 +24,7 @@ def new_project():
         month = request.form["date"][5:7]
         new_project = Project(
           title=request.form["title"],
-          date=clean_date(request.form["date"]),
+          date=request.form["date"],
           description=request.form["description"],
           skills=request.form["skills"],
           url=request.form["github"])
@@ -49,7 +49,7 @@ def edit_project(id):
         project.title = request.form["title"]
         year = request.form["date"][0:4]
         month = request.form["date"][5:7]
-        project.date = clean_date(request.form["date"])
+        project.date = request.form["date"]
         project.description = request.form["description"]
         project.skills = request.form["skills"]
         project.url = request.form["github"]
