@@ -55,7 +55,7 @@ def edit_project(id):
         project.url = request.form["github"]
         db.session.commit()
         return redirect(url_for("index"))
-    return render_template("editform.html", project=project, projects=projects)
+    return render_template("edit.html", project=project, projects=projects)
 
 
 @app.route("/projects/<id>/delete")
