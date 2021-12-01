@@ -25,7 +25,7 @@ def new_project():
         new_project = Project(
           title=request.form["title"],
           date=request.form["date"],
-          description=request.form.get["description", False],
+          description=request.form.get(["description", False]),
           skills=request.form["skills"],
           url=request.form["github"])
         db.session.add(new_project)
