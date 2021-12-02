@@ -566,8 +566,8 @@ Media Queries
     }
 
     .header img {
-        height: 320px;
-        width: 320px;
+        height: 380px;
+        width: 380px;
     }
 
     .navigation {
@@ -645,7 +645,7 @@ Media Queries
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1500px){
     .navigation .nav-item {
         padding-left: 15px;
         padding-right: 15px;
