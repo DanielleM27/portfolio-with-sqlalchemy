@@ -17,14 +17,19 @@ class Project(db.Model):
     url = db.Column('GitHub Repo Link', db.Text)
 
     def __repr__(self):
-        return f"""\n-------
+        return f"""\n---
                 \Title: {self.title}
-                \r----------
+                \r---
                 \Date: {self.date}
-                \r----------
+                \r---
                 \Description: {self.description}
-                \r----------
+                \r---
                 \Skills: {self.skills}
-                \r----------
+                \r---
                 \rGithub Repo Link: {self.url}
                  """
+    
+    
+    
+    
+    
