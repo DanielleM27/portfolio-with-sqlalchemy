@@ -25,7 +25,7 @@ def new_project():
         new_project = Project(
           title=request.form["title"],
           date=request.form["date"],
-          description=request.form["description"],
+          description=request.form.get["description"],
           skills=request.form["skills"],
           url=request.form["github"])
         db.session.add(new_project)
@@ -50,7 +50,7 @@ def edit_project(id):
         year = request.form["date"][0:4]
         month = request.form["date"][5:7]
         project.date = request.form["date"]
-        project.description = request.form["description"]
+        project.description = request.form.get["description"]
         project.skills = request.form["skills"]
         project.url = request.form["github"]
         db.session.commit()
