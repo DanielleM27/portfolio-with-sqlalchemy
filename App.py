@@ -1,7 +1,8 @@
 from flask import Flask, render_template, redirect, request, url_for
 from models import db, Project, app
+from datetime import date, datetime 
 import random
-import datetime
+
 
 
 @app.route("/")
