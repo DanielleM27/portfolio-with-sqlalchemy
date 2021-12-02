@@ -3,9 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import date, datetime
 import datetime
 
+
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///projects.db"
 db = SQLAlchemy(app)
+
 
 
 class Project(db.Model):
@@ -16,6 +19,8 @@ class Project(db.Model):
     skills = db.Column("Skills", db.Text)
     url = db.Column('GitHub Repo Link', db.Text)
 
+    
+    
     def __repr__(self):
         return f"""\n---
                 \Title: {self.title}
@@ -28,6 +33,10 @@ class Project(db.Model):
                 \r---
                 \rGithub Repo Link: {self.url}
                  """
+    
+    
+    
+    
     
     
     
