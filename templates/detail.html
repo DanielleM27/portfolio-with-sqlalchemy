@@ -7,7 +7,7 @@
             <p>{{ project.date.strftime('%B %Y') }}</p>
             <a href="{{ project.url }}" class="github-btn">
                 <i class="fab fa-github"></i>
-                View on GitHub
+                View on  My GitHub
             </a>
             <ul class="project-skills">
                 <div>
@@ -28,11 +28,11 @@
         <section id="edit-delete">
             <a href="{{ url_for('edit_project', id=project.id) }}">
                 <i class="fas fa-edit"></i>
-                Edit
+                Edit Project
             </a>
             <a href="{{ url_for('delete_project', id=project.id) }}">
                 <i class="far fa-trash-alt"></i>
-                Delete
+                Delete Project
             </a>
         </section>
 {% endblock %}
