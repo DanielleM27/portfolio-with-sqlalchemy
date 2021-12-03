@@ -22,19 +22,7 @@ class Project(db.Model):
     
     
     def __repr__(self):
-        return f"""\n---
-                \Title: {self.title}
-                \r---
-                \Date: {self.date}
-                \r---
-                \Description: {self.description}
-                \r---
-                \Skills: {self.skills}
-                \r---
-                \rGithub Repo Link: {self.url}
-                 """
-    
-    
+        return f"Title: {self.title}, Date: {self.date}, Description: {self.description}, Skills: {self.skills}, Github Repo Link: {self.url}"
     
     
     
