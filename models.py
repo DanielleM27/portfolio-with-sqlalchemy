@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from datetime import date
+from datetime import datetime
 import datetime
 import time
 
