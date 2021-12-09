@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 class Project(db.Model):
     id = db.Column("Id", db.Integer, primary_key=True)
     title = db.Column("Title", db.String())
-    date = db.Column("Date", db.DateTime, default=datetime.strptime(Date, '%Y-%m-%d'))
+    date = db.Column("Date", db.DateTime, default=datetime.strptime(date, '%Y-%m-%d'))
     description = db.Column("Description", db.Text)
     skills = db.Column("Skills", db.Text)
     url = db.Column('GitHub Repo Link', db.Text)
