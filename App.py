@@ -49,7 +49,6 @@ def edit_project(id):
         edit_project = Project(title=request.form['title'], date=sql_happy,
         description=request.form['description'], skills = request.form['skills'],               
         url = request.form['github'])
-        db.session.edit(edit_project)
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
