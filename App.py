@@ -21,14 +21,11 @@ def about():
 def new_project():
     projects = Project.query.all()
     if request.form:
-        year = request.form["date"][0:4]
-        month = request.form["date"][5:7]
-        new_project = Project(
-          title=request.form["title"],
-          date=request.form["date"],
-          description=request.form["description"],
-          skills=request.form["skills"],
-          url=request.form["github"])
+        capture = request.form['date']
+        sql_happy = datetime.strptime(capture, '%Y-%m')
+        new_project = Project(title=request.form['title'], date=sql_happy,
+        description=request.form['description'], skills = request.form['skills'],               
+        url = request.form['github'])
         db.session.add(new_project)
         db.session.commit()
         return redirect(url_for("index"))
