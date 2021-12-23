@@ -45,9 +45,8 @@ def edit_project(id):
     project = Project.query.get_or_404(id)
     if request.form:
         project.title = request.form['title']
-        capture = request.form['date']
+        capture = request.form['date'], date=sql_happy,
         sql_happy = datetime.strptime(capture, '%Y-%m')
-        date=sql_happy
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
