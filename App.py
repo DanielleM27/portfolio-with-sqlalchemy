@@ -47,6 +47,7 @@ def edit_project(id):
         project.title = request.form['title']
         capture = request.form['date']
         sql_happy = datetime.strptime(capture, '%Y-%m')
+        date=sql_happy
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
