@@ -50,7 +50,7 @@ def edit_project(id):
         capture = request.form['date']
         sql_happy = datetime.strptime(capture, '%Y-%m')
         new_project = Project(title=request.form['title'], date=sql_happy,
-        description=request.form['desc'], skills = request.form['skills'],               
+        description=request.form['description'], skills = request.form['skills'],               
         url = request.form['github'])
         db.session.commit()
         return redirect(url_for("index"))
