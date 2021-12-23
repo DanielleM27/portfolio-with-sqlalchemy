@@ -46,7 +46,7 @@ def edit_project(id):
     if request.form:
         capture = request.form['date']
         sql_happy = datetime.strptime(capture, '%Y-%m')
-        new_project = Project(title=request.form['title'], date=sql_happy,
+        edit_project = Project(title=request.form['title'], date=sql_happy,
         description=request.form['description'], skills = request.form['skills'],               
         url = request.form['github'])
         db.session.commit()
