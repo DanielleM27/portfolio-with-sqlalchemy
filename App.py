@@ -44,11 +44,9 @@ def edit_project(id):
     projects = Project.query.all()
     project = Project.query.get_or_404(id)
     if request.form:
+        project.title = request.form['title']
         capture = request.form['date']
         sql_happy = datetime.strptime(capture, '%Y-%m')
-        edit_project = Project(title=request.form['title'], date=sql_happy,
-        description=request.form['description'], skills = request.form['skills'],               
-        url = request.form['github'])
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
