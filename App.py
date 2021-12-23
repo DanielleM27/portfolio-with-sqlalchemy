@@ -47,13 +47,11 @@ def edit_project(id):
     projects = Project.query.all()
     project = Project.query.get_or_404(id)
     if request.form:
-        project.title = request.form["title"]
-        year = request.form["date"][0:4]
-        month = request.form["date"][5:7]
-        project.date = request.form["date"]
-        project.description = request.form["description"]
-        project.skills = request.form["skills"]
-        project.url = request.form["github"]
+        capture = request.form['date']
+        sql_happy = datetime.strptime(capture, '%Y-%m')
+        new_project = Projects(title=request.form['title'], date=sql_happy,
+        description=request.form['desc'], skills = request.form['skills'],               
+        url = request.form['github'])
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
