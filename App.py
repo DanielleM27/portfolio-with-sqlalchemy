@@ -47,6 +47,9 @@ def edit_project(id):
         project.title = request.form['title']
         project.date = request.form['date']
         project.date = datetime.strptime(project.date, '%Y-%m')
+        project.description = request.form['description']
+        project.skills = request.form['skills']              
+        url = request.form['github']
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
