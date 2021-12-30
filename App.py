@@ -46,7 +46,7 @@ def edit_project(id):
     if request.form:
         project.title = request.form['title']
         project.date = request.form['date']
-        project.date = datetime.strptime(capture, '%Y-%m')
+        project.date = datetime.strptime(project.date, '%Y-%m')
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("edit.html", project=project, projects=projects)
