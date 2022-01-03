@@ -66,7 +66,7 @@ def delete_project(id):
   
 
 @app.errorhandler(404)
-def error_found(error):
+def handle_error(error):
     projects = Project.query.all()
     return render_template("404.html", msg=error, projects=projects), 404
 
