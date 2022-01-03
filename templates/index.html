@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 {% block content %}
+
+
         <section class="header">
             <h1>Hey there my name is Danielle Murray and I'm an aspiring Full-Stack Software Developer</h1>
             <p>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler</p>
@@ -29,7 +31,6 @@
             </ul>
         </section>
         <section id="projects">
-            <div id="circle"></div>
             <i class='fas fa-laptop-code fa-spin fa-3x'></i>
             <h2>Projects</h2>
             {% for project in projects %}
@@ -49,7 +50,6 @@
                         Skills: {{ project.skills }}
                     </p>
                 </div>
-            <div id="circle"></div>
             {% endfor %}
         </section>
         <section id="contact">
